@@ -1,0 +1,1384 @@
+{
+  "version": 1,
+  "pack": "TRAE宝积分能量站",
+  "defaults": {
+    "size": 512,
+    "outline": 8,
+    "fps": 12.5,
+    "duration_ms": 3200
+  },
+  "design": {
+    "character": "TRAE宝：黑色方形脑袋、屏幕即电量表、哑光黑方块机身；16 幕体型比例不变",
+    "core_idea": "积分 = 电量：有钱发光，没钱熄屏；能量色只有荧光绿，红仅扣分报错与瓜瓤，黄仅能量闪电，蓝仅像素爱心",
+    "coordinates": "640×640；左右指观众视角；角度逆时针为正",
+    "overview_title": "TRAE宝积分能量站 / 16 幕像素表情",
+    "overview_subtitle": "赚 · 花 · 危 · 友   积分 = 电量 · 有钱发光，没钱熄屏",
+    "chapter_tones": {
+      "赚": "#5ADB97",
+      "花": "#D9A93C",
+      "危": "#EC6269",
+      "友": "#A9E6CC"
+    },
+    "chapters": "赚花危友",
+    "discipline": {
+      "red": [
+        "06_burnout",
+        "12_crashed",
+        "15_melon_watch"
+      ],
+      "gold": [
+        "06_burnout"
+      ],
+      "blue": [
+        "08_topup",
+        "10_begging",
+        "14_big_thanks"
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "01_checkin",
+      "chapter": "赚①",
+      "caption": "签到成功",
+      "action": "左臂抡起打卡锤砸下，屏幕 ✓+10 角标闪动",
+      "screen": "checkin",
+      "screen_brief": "眯眼笑与 ✓+10 角标",
+      "pose": {
+        "arms": [
+          -45,
+          10
+        ],
+        "legs": [
+          -3,
+          3
+        ]
+      },
+      "props": [
+        {
+          "asset": "hammer",
+          "anchor": "left_wrist",
+          "offset": [
+            -14,
+            4
+          ],
+          "scale": 0.95,
+          "angle": -20
+        }
+      ],
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            500,
+            130
+          ],
+          "scale": 0.9,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.7
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              -45
+            ],
+            [
+              0.35,
+              -128
+            ],
+            [
+              0.5,
+              -128
+            ],
+            [
+              0.62,
+              -70
+            ],
+            [
+              1,
+              -45
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.42,
+              -7
+            ],
+            [
+              0.6,
+              3
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02_arrival",
+      "chapter": "赚②",
+      "caption": "积分到账",
+      "action": "双臂欢呼小跳两下，屏幕 +100 与星星眼同频闪烁",
+      "screen": "arrive",
+      "screen_brief": "+100 跳字与星星眼",
+      "pose": {
+        "arms": [
+          -117,
+          117
+        ],
+        "legs": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            118,
+            140
+          ],
+          "scale": 0.85,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.6
+          }
+        },
+        {
+          "asset": "spark_green",
+          "center": [
+            520,
+            110
+          ],
+          "scale": 0.7,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.7
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              -26
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              -16
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -8
+            ],
+            [
+              0.25,
+              8
+            ],
+            [
+              0.5,
+              -8
+            ],
+            [
+              0.75,
+              8
+            ],
+            [
+              1,
+              -8
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              8
+            ],
+            [
+              0.25,
+              -8
+            ],
+            [
+              0.5,
+              8
+            ],
+            [
+              0.75,
+              -8
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03_grind",
+      "chapter": "赚③",
+      "caption": "搬砖赚币",
+      "action": "双臂环抱一摞砖，身体被压得上下颤，额头冒汗",
+      "screen": "grind",
+      "screen_brief": "菱形眼、砖块与 +1",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": 40,
+            "lower": 130
+          },
+          "right": {
+            "upper": -40,
+            "lower": -130
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "brick",
+          "center": [
+            320,
+            392
+          ],
+          "scale": 0.95,
+          "anim": {
+            "type": "sway",
+            "freq": 1,
+            "amp": 3
+          }
+        },
+        {
+          "asset": "brick",
+          "center": [
+            320,
+            424
+          ],
+          "scale": 0.95,
+          "anim": {
+            "type": "sway",
+            "freq": 1,
+            "amp": 3
+          }
+        },
+        {
+          "asset": "sweat",
+          "center": [
+            452,
+            150
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "bob",
+            "freq": 1,
+            "amp": 6
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              7
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              -3
+            ],
+            [
+              0.5,
+              3
+            ],
+            [
+              1,
+              -3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04_invite",
+      "chapter": "赚④",
+      "caption": "邀请有礼",
+      "action": "原地踏步招手，屏幕弹出像素「来！」",
+      "screen": "invite",
+      "screen_brief": "眯眼笑与像素「来！」",
+      "pose": {
+        "arms": [
+          0,
+          20
+        ],
+        "legs": [
+          -10,
+          10
+        ]
+      },
+      "tracks": [
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              20
+            ],
+            [
+              0.3,
+              150
+            ],
+            [
+              0.5,
+              118
+            ],
+            [
+              0.72,
+              150
+            ],
+            [
+              1,
+              20
+            ]
+          ]
+        },
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -10
+            ],
+            [
+              0.5,
+              10
+            ],
+            [
+              1,
+              -10
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              10
+            ],
+            [
+              0.5,
+              -10
+            ],
+            [
+              1,
+              10
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              5
+            ],
+            [
+              0.5,
+              -2
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05_fullpower",
+      "chapter": "花①",
+      "caption": "满电开工",
+      "action": "叉腰挺胸小幅起伏，屏幕 100% 满格电池",
+      "screen": "fullpower",
+      "screen_brief": "100% 满格电池",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": -52,
+            "lower": 118
+          },
+          "right": {
+            "upper": 52,
+            "lower": -118
+          }
+        }
+      },
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            140,
+            130
+          ],
+          "scale": 0.7,
+          "anim": {
+            "type": "pulse",
+            "freq": 2,
+            "amount": 0.2
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              -6
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              2
+            ],
+            [
+              0.5,
+              -3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06_burnout",
+      "chapter": "花②",
+      "caption": "火力全开",
+      "action": "低头猛冲，脑袋高频抖动，金色闪电与 -5 齐飞",
+      "screen": "burnout",
+      "screen_brief": "金色闪电与红色 -5 坠落",
+      "pose": {
+        "arms": [
+          26,
+          -26
+        ],
+        "head_angle": 6
+      },
+      "props": [
+        {
+          "asset": "bolt",
+          "center": [
+            496,
+            128
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "blink",
+            "freq": 4,
+            "duty": 0.5
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.14,
+              -5
+            ],
+            [
+              0.28,
+              5
+            ],
+            [
+              0.42,
+              -5
+            ],
+            [
+              0.56,
+              5
+            ],
+            [
+              0.7,
+              -5
+            ],
+            [
+              0.84,
+              5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07_budget",
+      "chapter": "花③",
+      "caption": "精打细算",
+      "action": "歪头眯眼按计算器，手边一台计算器跟着按",
+      "screen": "budget",
+      "screen_brief": "半闭眼、-5 与迷你计算器",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "right": {
+            "upper": -35,
+            "lower": -125
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "calculator",
+          "anchor": "right_wrist",
+          "offset": [
+            10,
+            6
+          ],
+          "scale": 1.05,
+          "anim": {
+            "type": "bob",
+            "freq": 2,
+            "amp": 3
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              8
+            ],
+            [
+              0.5,
+              3
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "path": "bent_arms.right.lower",
+          "keys": [
+            [
+              0,
+              -125
+            ],
+            [
+              0.5,
+              -118
+            ],
+            [
+              1,
+              -125
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08_topup",
+      "chapter": "花④",
+      "caption": "氪金充值",
+      "action": "双手捧卡递出，屏幕爱心眼扑通扑通",
+      "screen": "topup",
+      "screen_brief": "蓝色像素爱心眼",
+      "pose": {
+        "arms": [
+          62,
+          -62
+        ]
+      },
+      "props": [
+        {
+          "asset": "bankcard",
+          "center": [
+            320,
+            386
+          ],
+          "scale": 1,
+          "angle": -8,
+          "anim": {
+            "type": "pulse",
+            "freq": 2,
+            "amount": 0.12
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              56
+            ],
+            [
+              0.5,
+              66
+            ],
+            [
+              1,
+              56
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -56
+            ],
+            [
+              0.5,
+              -66
+            ],
+            [
+              1,
+              -56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09_zero_left",
+      "chapter": "危①",
+      "caption": "余额不足",
+      "action": "整个身体向左垮塌下垂，屏幕 0.0.0 有气无力地闪",
+      "screen": "zero_left",
+      "screen_brief": "暗淡 0.0.0 闪烁",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ]
+      },
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -7
+            ],
+            [
+              0.5,
+              -4
+            ],
+            [
+              1,
+              -7
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              6
+            ],
+            [
+              0.5,
+              11
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              6
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10_begging",
+      "chapter": "危②",
+      "caption": "求求了",
+      "action": "双手合十左右摇摆拜托，屏幕泪眼汪汪",
+      "screen": "begging",
+      "screen_brief": "泪眼汪汪",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": 45,
+            "lower": 55
+          },
+          "right": {
+            "upper": -45,
+            "lower": -55
+          }
+        }
+      },
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -5
+            ],
+            [
+              0.5,
+              5
+            ],
+            [
+              1,
+              -5
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              -3
+            ],
+            [
+              0.5,
+              3
+            ],
+            [
+              1,
+              -3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11_power_save",
+      "chapter": "危③",
+      "caption": "摆烂省电",
+      "action": "歪头瘫着左右轻晃，屏幕单眼待机冒 zZ",
+      "screen": "power_save",
+      "screen_brief": "单眼待机与 zZ",
+      "pose": {
+        "arms": [
+          4,
+          -4
+        ],
+        "head_angle": 11
+      },
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -4
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              -4
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              4
+            ],
+            [
+              0.5,
+              9
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12_crashed",
+      "chapter": "危④",
+      "caption": "当机崩溃",
+      "action": "双手贴脸抓狂，全身左右抽搐，屏幕 ERR0R 花屏",
+      "screen": "crashed",
+      "screen_brief": "ERR0R 花屏抖动",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": -25,
+            "lower": -155
+          },
+          "right": {
+            "upper": 25,
+            "lower": 155
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "sweat",
+          "center": [
+            196,
+            128
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.6
+          }
+        },
+        {
+          "asset": "sweat",
+          "center": [
+            452,
+            136
+          ],
+          "scale": 0.85,
+          "anim": {
+            "type": "blink",
+            "freq": 4,
+            "duty": 0.5
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.0",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.18,
+              -7
+            ],
+            [
+              0.36,
+              7
+            ],
+            [
+              0.54,
+              -5
+            ],
+            [
+              0.72,
+              5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.25,
+              -6
+            ],
+            [
+              0.5,
+              6
+            ],
+            [
+              0.75,
+              -6
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13_treat_you",
+      "chapter": "友①",
+      "caption": "俺请客",
+      "action": "双手捧起一枚积分币递到你面前，屏幕眯眼笑",
+      "screen": "treat",
+      "screen_brief": "眯眼笑与积分币",
+      "pose": {
+        "arms": [
+          60,
+          -60
+        ]
+      },
+      "props": [
+        {
+          "asset": "coin_t",
+          "center": [
+            320,
+            400
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "bob",
+            "freq": 2,
+            "amp": 5
+          }
+        }
+      ],
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            486,
+            150
+          ],
+          "scale": 0.7,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.6
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              54
+            ],
+            [
+              0.5,
+              64
+            ],
+            [
+              1,
+              54
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -54
+            ],
+            [
+              0.5,
+              -64
+            ],
+            [
+              1,
+              -54
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14_big_thanks",
+      "chapter": "友②",
+      "caption": "谢谢老板",
+      "action": "深深鞠躬再起身，头顶升起冰蓝像素爱心",
+      "screen": "big_thanks",
+      "screen_brief": "眯眼笑与蓝色小爱心",
+      "pose": {
+        "arms": [
+          12,
+          -12
+        ]
+      },
+      "props": [
+        {
+          "asset": "heart_ice",
+          "center": [
+            468,
+            148
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "bob",
+            "freq": 1,
+            "amp": 9
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.32,
+              17
+            ],
+            [
+              0.58,
+              17
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              12
+            ],
+            [
+              0.32,
+              42
+            ],
+            [
+              0.58,
+              42
+            ],
+            [
+              1,
+              12
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -12
+            ],
+            [
+              0.32,
+              -42
+            ],
+            [
+              0.58,
+              -42
+            ],
+            [
+              1,
+              -12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15_melon_watch",
+      "chapter": "友③",
+      "caption": "吃瓜围观",
+      "action": "抱着半块西瓜啃，脑袋好奇地歪来歪去",
+      "screen": "melon_watch",
+      "screen_brief": "瓜籽眼与 o 嘴",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": 42,
+            "lower": 128
+          },
+          "right": {
+            "upper": -42,
+            "lower": -128
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "watermelon",
+          "center": [
+            320,
+            418
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "bob",
+            "freq": 2,
+            "amp": 3
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              7
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              7
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              4
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16_dream_rich",
+      "chapter": "友④",
+      "caption": "积分自由梦",
+      "action": "枕着积分币堆打盹，屏幕星星眼冒 zZ",
+      "screen": "dream",
+      "screen_brief": "星星眼、zZ 与币光",
+      "pose": {
+        "arms": [
+          8,
+          -8
+        ],
+        "head_angle": -9
+      },
+      "props": [
+        {
+          "asset": "coin_pile_t",
+          "center": [
+            512,
+            448
+          ],
+          "scale": 1.05
+        }
+      ],
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            130,
+            150
+          ],
+          "scale": 0.75,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.6
+          }
+        },
+        {
+          "asset": "spark_green",
+          "center": [
+            520,
+            220
+          ],
+          "scale": 0.6,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.5
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              2
+            ],
+            [
+              0.5,
+              -2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              6
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
